@@ -2,13 +2,13 @@ $(document).ready(function(){
   // Add user
   $(document).on('click', '.user_add', function(){
     //user Info
-    var user_id = $('#user_id').val();
-    var name = $('#name').val();
-    var number = $('#number').val();
-    var email = $('#email').val();
+    const user_id = $('#user_id').val();
+    const name = $('#name').val();
+    const number = $('#number').val();
+    const email = $('#email').val();
     //Additional Info
     var dev_uid = $('#dev_uid').val();
-    var gender = $(".gender:checked").val();
+    const gender = $(".gender:checked").val();
     var dev_uid = $('#dev_sel option:selected').val();
     
     $.ajax({
@@ -55,13 +55,13 @@ $(document).ready(function(){
   // Update user
   $(document).on('click', '.user_upd', function(){
     //user Info
-    var user_id = $('#user_id').val();
-    var name = $('#name').val();
-    var number = $('#number').val();
-    var email = $('#email').val();
+    const user_id = $('#user_id').val();
+    const name = $('#name').val();
+    const number = $('#number').val();
+    const email = $('#email').val();
     //Additional Info
     var dev_uid = $('#dev_uid').val();
-    var gender = $(".gender:checked").val();
+    const gender = $(".gender:checked").val();
     var dev_uid = $('#dev_sel option:selected').val();
 
     $.ajax({
@@ -108,7 +108,7 @@ $(document).ready(function(){
   // delete user
   $(document).on('click', '.user_rmo', function(){
 
-    var user_id = $('#user_id').val();
+    const user_id = $('#user_id').val();
 
     bootbox.confirm("Do you really want to delete this User?", function(result) {
       if(result){
@@ -152,8 +152,8 @@ $(document).ready(function(){
   });
   // select user
   $(document).on('click', '.select_btn', function(){
-    var el = this;
-    var card_uid = $(this).attr("id");
+    const el = this;
+    const card_uid = $(this).attr("id");
     $.ajax({
       url: 'manage_users_conf.php',
       type: 'GET',
@@ -180,28 +180,28 @@ $(document).ready(function(){
 
         console.log(response);
 
-        var user_id = {
-          User_id : []
+        const user_id = {
+          User_id: []
         };
-        var user_name = {
-          User_name : []
+        const user_name = {
+          User_name: []
         };
-        var user_on = {
-          User_on : []
+        const user_on = {
+          User_on: []
         };
-        var user_email = {
-          User_email : []
+        const user_email = {
+          User_email: []
         };
-        var user_dev = {
-          User_dev : []
+        const user_dev = {
+          User_dev: []
         };
-        var user_gender = {
-          User_gender : []
+        const user_gender = {
+          User_gender: []
         };
 
-        var len = response.length;
+        const len = response.length;
 
-        for (var i = 0; i < len; i++) {
+        for (let i = 0; i < len; i++) {
             user_id.User_id.push(response[i].id);
             user_name.User_name.push(response[i].username);
             user_on.User_on.push(response[i].serialnumber);

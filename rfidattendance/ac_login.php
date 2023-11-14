@@ -29,11 +29,11 @@ if (isset($_POST['login'])) {
 
 			if ($row = mysqli_fetch_assoc($resultl)) {
 				$pwdCheck = password_verify($Userpass, $row['admin_pwd']);
-				if ($pwdCheck == false) {
+				if (!$pwdCheck) {
 					header("location: login.php?error=wrongpassword");
   					exit();
 				}
-				else if ($pwdCheck == true) {
+				else if ($pwdCheck) {
 	                session_start();
 					$_SESSION['Admin-name'] = $row['admin_name'];
 					$_SESSION['Admin-email'] = $row['admin_email'];
@@ -54,4 +54,3 @@ else{
   header("location: login.php");
   exit();
 }
-?>

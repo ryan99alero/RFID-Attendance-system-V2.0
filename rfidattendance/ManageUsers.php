@@ -5,7 +5,7 @@ if (!isset($_SESSION['Admin-name'])) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Manage Users</title>
   	<meta charset="utf-8">
@@ -23,8 +23,8 @@ if (!isset($_SESSION['Admin-name'])) {
 	<script src="js/manage_users.js"></script>
 	<script>
 	  	$(window).on("load resize ", function() {
-		    var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
-		    $('.tbl-header').css({'padding-right':scrollWidth});
+            const scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+            $('.tbl-header').css({'padding-right':scrollWidth});
 		}).resize();
 	</script>
 	<script>

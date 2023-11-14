@@ -39,11 +39,11 @@ if (isset($_POST['update'])) {
             $resultl = mysqli_stmt_get_result($result);
             if ($row = mysqli_fetch_assoc($resultl)) {
                 $pwdCheck = password_verify($up_password, $row['admin_pwd']);
-                if ($pwdCheck == false) {
+                if (!$pwdCheck) {
                     header("location: index.php?error=wrongpasswordup");
                     exit();
                 }
-                else if ($pwdCheck == true) {
+                else if ($pwdCheck) {
                     if ($useremail == $up_email) {
                         $sql = "UPDATE admin SET admin_name=? WHERE admin_email=?";
                         $stmt = mysqli_stmt_init($conn);
@@ -106,4 +106,3 @@ else{
     exit();
 }
 //*********************************************************************************
-?>

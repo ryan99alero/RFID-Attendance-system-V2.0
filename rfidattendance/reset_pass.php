@@ -1,11 +1,17 @@
 <?php  
 
 if (isset($_POST['reset_pass'])) {
-	
-	$selector = bin2hex(random_bytes(8));
-	$token = random_bytes(32);
 
-	$url = "https://domain-name.com/new_pass.php?selector=".$selector."&validator=".bin2hex($token);
+    try {
+        $selector = bin2hex(random_bytes(8));
+    } catch (Exception $e) {
+    }
+    try {
+        $token = random_bytes(32);
+    } catch (Exception $e) {
+    }
+
+    $url = "https://domain-name.com/new_pass.php?selector=".$selector."&validator=".bin2hex($token);
 
 	$expires = date("U") + 1800;
 
@@ -86,4 +92,3 @@ else{
 	header("location: index.php");
 	exit();
 }
-?>

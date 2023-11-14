@@ -38,11 +38,11 @@ if (isset($_POST['reset'])) {
 		else{
 			$tokenBin = hex2bin($validator);
 			$tokeCheck = password_verify($tokenBin, $row['pwd_reset_token']);
-			if ($tokeCheck == false) {
+			if (!$tokeCheck) {
 				header("location: new_pass.php?error=resubmit");
 				exit();
 			}
-			elseif ($tokeCheck == true) {
+			elseif ($tokeCheck) {
 
 				$tokenEmail = $row['pwd_reset_email'];
 
@@ -96,4 +96,3 @@ else{
 	header("location: index.php");
 	exit();
 }
-?>

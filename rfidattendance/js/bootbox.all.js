@@ -24,25 +24,26 @@
   //  @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
   if (!Object.keys) {
     Object.keys = (function () {
-      var hasOwnProperty = Object.prototype.hasOwnProperty,
-        hasDontEnumBug = !({ toString: null }).propertyIsEnumerable('toString'),
-        dontEnums = [
-          'toString',
-          'toLocaleString',
-          'valueOf',
-          'hasOwnProperty',
-          'isPrototypeOf',
-          'propertyIsEnumerable',
-          'constructor'
-        ],
-        dontEnumsLength = dontEnums.length;
+      const hasOwnProperty = Object.prototype.hasOwnProperty,
+          hasDontEnumBug = !({toString: null}).propertyIsEnumerable('toString'),
+          dontEnums = [
+            'toString',
+            'toLocaleString',
+            'valueOf',
+            'hasOwnProperty',
+            'isPrototypeOf',
+            'propertyIsEnumerable',
+            'constructor'
+          ],
+          dontEnumsLength = dontEnums.length;
 
       return function (obj) {
         if (typeof obj !== 'function' && (typeof obj !== 'object' || obj === null)) {
           throw new TypeError('Object.keys called on non-object');
         }
 
-        var result = [], prop, i;
+        const result = [];
+        let prop, i;
 
         for (prop in obj) {
           if (hasOwnProperty.call(obj, prop)) {
@@ -63,267 +64,267 @@
     }());
   }
 
-  var exports = {};
+  const exports = {};
 
-  var VERSION = '5.0.0';
+  const VERSION = '5.0.0';
   exports.VERSION = VERSION;
 
-  var locales = {
-      ar : {
-        OK      : 'موافق',
-        CANCEL  : 'الغاء',
-        CONFIRM : 'تأكيد'
-      },
-      bg_BG : {
-        OK      : 'Ок',
-        CANCEL  : 'Отказ',
-        CONFIRM : 'Потвърждавам'
-      },
-      br : {
-        OK      : 'OK',
-        CANCEL  : 'Cancelar',
-        CONFIRM : 'Sim'
-      },
-      cs : {
-        OK      : 'OK',
-        CANCEL  : 'Zrušit',
-        CONFIRM : 'Potvrdit'
-      },
-      da : {
-        OK      : 'OK',
-        CANCEL  : 'Annuller',
-        CONFIRM : 'Accepter'
-      },
-      de : {
-        OK      : 'OK',
-        CANCEL  : 'Abbrechen',
-        CONFIRM : 'Akzeptieren'
-      },
-      el : {
-        OK      : 'Εντάξει',
-        CANCEL  : 'Ακύρωση',
-        CONFIRM : 'Επιβεβαίωση'
-      },
-      en : {
-        OK      : 'OK',
-        CANCEL  : 'Cancel',
-        CONFIRM : 'OK'
-      },
-      es : {
-        OK      : 'OK',
-        CANCEL  : 'Cancelar',
-        CONFIRM : 'Aceptar'
-      },
-      eu : {
-        OK      : 'OK',
-        CANCEL  : 'Ezeztatu',
-        CONFIRM : 'Onartu'
-      },
-      et : {
-        OK      : 'OK',
-        CANCEL  : 'Katkesta',
-        CONFIRM : 'OK'
-      },
-      fa : {
-        OK      : 'قبول',
-        CANCEL  : 'لغو',
-        CONFIRM : 'تایید'
-      },
-      fi : {
-        OK      : 'OK',
-        CANCEL  : 'Peruuta',
-        CONFIRM : 'OK'
-      },
-      fr : {
-        OK      : 'OK',
-        CANCEL  : 'Annuler',
-        CONFIRM : 'Confirmer'
-      },
-      he : {
-        OK      : 'אישור',
-        CANCEL  : 'ביטול',
-        CONFIRM : 'אישור'
-      },
-      hu : {
-        OK      : 'OK',
-        CANCEL  : 'Mégsem',
-        CONFIRM : 'Megerősít'
-      },
-      hr : {
-        OK      : 'OK',
-        CANCEL  : 'Odustani',
-        CONFIRM : 'Potvrdi'
-      },
-      id : {
-        OK      : 'OK',
-        CANCEL  : 'Batal',
-        CONFIRM : 'OK'
-      },
-      it : {
-        OK      : 'OK',
-        CANCEL  : 'Annulla',
-        CONFIRM : 'Conferma'
-      },
-      ja : {
-        OK      : 'OK',
-        CANCEL  : 'キャンセル',
-        CONFIRM : '確認'
-      },
-      ka : {
-        OK: 'OK',
-        CANCEL: 'გაუქმება',
-        CONFIRM: 'დადასტურება'
-      },
-      ko : {
-        OK: 'OK',
-        CANCEL: '취소',
-        CONFIRM: '확인'
-      },
-      lt : {
-        OK      : 'Gerai',
-        CANCEL  : 'Atšaukti',
-        CONFIRM : 'Patvirtinti'
-      },
-      lv : {
-        OK      : 'Labi',
-        CANCEL  : 'Atcelt',
-        CONFIRM : 'Apstiprināt'
-      },
-      nl : {
-        OK      : 'OK',
-        CANCEL  : 'Annuleren',
-        CONFIRM : 'Accepteren'
-      },
-      no : {
-        OK      : 'OK',
-        CANCEL  : 'Avbryt',
-        CONFIRM : 'OK'
-      },
-      pl : {
-        OK      : 'OK',
-        CANCEL  : 'Anuluj',
-        CONFIRM : 'Potwierdź'
-      },
-      pt : {
-        OK      : 'OK',
-        CANCEL  : 'Cancelar',
-        CONFIRM : 'Confirmar'
-      },
-      ru : {
-        OK      : 'OK',
-        CANCEL  : 'Отмена',
-        CONFIRM : 'Применить'
-      },
-      sk : {
-        OK      : 'OK',
-        CANCEL  : 'Zrušiť',
-        CONFIRM : 'Potvrdiť'
-      },
-      sl : {
-        OK      : 'OK',
-        CANCEL  : 'Prekliči',
-        CONFIRM : 'Potrdi'
-      },
-      sq : {
-        OK      : 'OK',
-        CANCEL  : 'Anulo',
-        CONFIRM : 'Prano'
-      },
-      sv : {
-        OK      : 'OK',
-        CANCEL  : 'Avbryt',
-        CONFIRM : 'OK'
-      },
-      sw: {
-        OK      : 'Sawa',
-        CANCEL  : 'Ghairi',
-        CONFIRM: 'Thibitisha'
-      },
-      ta:{
-        OK      : 'சரி',
-        CANCEL  : 'ரத்து செய்',
-        CONFIRM : 'உறுதி செய்'
-      },
-      th : {
-        OK      : 'ตกลง',
-        CANCEL  : 'ยกเลิก',
-        CONFIRM : 'ยืนยัน'
-      },
-      tr : {
-        OK      : 'Tamam',
-        CANCEL  : 'İptal',
-        CONFIRM : 'Onayla'
-      },
-      uk : {
-        OK      : 'OK',
-        CANCEL  : 'Відміна',
-        CONFIRM : 'Прийняти'
-      },
-      zh_CN : {
-        OK      : 'OK',
-        CANCEL  : '取消',
-        CONFIRM : '确认'
-      },
-      zh_TW : {
-        OK      : 'OK',
-        CANCEL  : '取消',
-        CONFIRM : '確認'
-      }
+  const locales = {
+    ar: {
+      OK: 'موافق',
+      CANCEL: 'الغاء',
+      CONFIRM: 'تأكيد'
+    },
+    bg_BG: {
+      OK: 'Ок',
+      CANCEL: 'Отказ',
+      CONFIRM: 'Потвърждавам'
+    },
+    br: {
+      OK: 'OK',
+      CANCEL: 'Cancelar',
+      CONFIRM: 'Sim'
+    },
+    cs: {
+      OK: 'OK',
+      CANCEL: 'Zrušit',
+      CONFIRM: 'Potvrdit'
+    },
+    da: {
+      OK: 'OK',
+      CANCEL: 'Annuller',
+      CONFIRM: 'Accepter'
+    },
+    de: {
+      OK: 'OK',
+      CANCEL: 'Abbrechen',
+      CONFIRM: 'Akzeptieren'
+    },
+    el: {
+      OK: 'Εντάξει',
+      CANCEL: 'Ακύρωση',
+      CONFIRM: 'Επιβεβαίωση'
+    },
+    en: {
+      OK: 'OK',
+      CANCEL: 'Cancel',
+      CONFIRM: 'OK'
+    },
+    es: {
+      OK: 'OK',
+      CANCEL: 'Cancelar',
+      CONFIRM: 'Aceptar'
+    },
+    eu: {
+      OK: 'OK',
+      CANCEL: 'Ezeztatu',
+      CONFIRM: 'Onartu'
+    },
+    et: {
+      OK: 'OK',
+      CANCEL: 'Katkesta',
+      CONFIRM: 'OK'
+    },
+    fa: {
+      OK: 'قبول',
+      CANCEL: 'لغو',
+      CONFIRM: 'تایید'
+    },
+    fi: {
+      OK: 'OK',
+      CANCEL: 'Peruuta',
+      CONFIRM: 'OK'
+    },
+    fr: {
+      OK: 'OK',
+      CANCEL: 'Annuler',
+      CONFIRM: 'Confirmer'
+    },
+    he: {
+      OK: 'אישור',
+      CANCEL: 'ביטול',
+      CONFIRM: 'אישור'
+    },
+    hu: {
+      OK: 'OK',
+      CANCEL: 'Mégsem',
+      CONFIRM: 'Megerősít'
+    },
+    hr: {
+      OK: 'OK',
+      CANCEL: 'Odustani',
+      CONFIRM: 'Potvrdi'
+    },
+    id: {
+      OK: 'OK',
+      CANCEL: 'Batal',
+      CONFIRM: 'OK'
+    },
+    it: {
+      OK: 'OK',
+      CANCEL: 'Annulla',
+      CONFIRM: 'Conferma'
+    },
+    ja: {
+      OK: 'OK',
+      CANCEL: 'キャンセル',
+      CONFIRM: '確認'
+    },
+    ka: {
+      OK: 'OK',
+      CANCEL: 'გაუქმება',
+      CONFIRM: 'დადასტურება'
+    },
+    ko: {
+      OK: 'OK',
+      CANCEL: '취소',
+      CONFIRM: '확인'
+    },
+    lt: {
+      OK: 'Gerai',
+      CANCEL: 'Atšaukti',
+      CONFIRM: 'Patvirtinti'
+    },
+    lv: {
+      OK: 'Labi',
+      CANCEL: 'Atcelt',
+      CONFIRM: 'Apstiprināt'
+    },
+    nl: {
+      OK: 'OK',
+      CANCEL: 'Annuleren',
+      CONFIRM: 'Accepteren'
+    },
+    no: {
+      OK: 'OK',
+      CANCEL: 'Avbryt',
+      CONFIRM: 'OK'
+    },
+    pl: {
+      OK: 'OK',
+      CANCEL: 'Anuluj',
+      CONFIRM: 'Potwierdź'
+    },
+    pt: {
+      OK: 'OK',
+      CANCEL: 'Cancelar',
+      CONFIRM: 'Confirmar'
+    },
+    ru: {
+      OK: 'OK',
+      CANCEL: 'Отмена',
+      CONFIRM: 'Применить'
+    },
+    sk: {
+      OK: 'OK',
+      CANCEL: 'Zrušiť',
+      CONFIRM: 'Potvrdiť'
+    },
+    sl: {
+      OK: 'OK',
+      CANCEL: 'Prekliči',
+      CONFIRM: 'Potrdi'
+    },
+    sq: {
+      OK: 'OK',
+      CANCEL: 'Anulo',
+      CONFIRM: 'Prano'
+    },
+    sv: {
+      OK: 'OK',
+      CANCEL: 'Avbryt',
+      CONFIRM: 'OK'
+    },
+    sw: {
+      OK: 'Sawa',
+      CANCEL: 'Ghairi',
+      CONFIRM: 'Thibitisha'
+    },
+    ta: {
+      OK: 'சரி',
+      CANCEL: 'ரத்து செய்',
+      CONFIRM: 'உறுதி செய்'
+    },
+    th: {
+      OK: 'ตกลง',
+      CANCEL: 'ยกเลิก',
+      CONFIRM: 'ยืนยัน'
+    },
+    tr: {
+      OK: 'Tamam',
+      CANCEL: 'İptal',
+      CONFIRM: 'Onayla'
+    },
+    uk: {
+      OK: 'OK',
+      CANCEL: 'Відміна',
+      CONFIRM: 'Прийняти'
+    },
+    zh_CN: {
+      OK: 'OK',
+      CANCEL: '取消',
+      CONFIRM: '确认'
+    },
+    zh_TW: {
+      OK: 'OK',
+      CANCEL: '取消',
+      CONFIRM: '確認'
+    }
   };
 
-  var templates = {
+  const templates = {
     dialog:
-    '<div class="bootbox modal" tabindex="-1" role="dialog" aria-hidden="true">' +
-    '<div class="modal-dialog">' +
-    '<div class="modal-content">' +
-    '<div class="modal-body"><div class="bootbox-body"></div></div>' +
-    '</div>' +
-    '</div>' +
-    '</div>',
+        '<div class="bootbox modal" tabindex="-1" role="dialog" aria-hidden="true">' +
+        '<div class="modal-dialog">' +
+        '<div class="modal-content">' +
+        '<div class="modal-body"><div class="bootbox-body"></div></div>' +
+        '</div>' +
+        '</div>' +
+        '</div>',
     header:
-    '<div class="modal-header">' +
-    '<h5 class="modal-title"></h5>' +
-    '</div>',
+        '<div class="modal-header">' +
+        '<h5 class="modal-title"></h5>' +
+        '</div>',
     footer:
-    '<div class="modal-footer"></div>',
+        '<div class="modal-footer"></div>',
     closeButton:
-    '<button type="button" class="bootbox-close-button close" aria-hidden="true">&times;</button>',
+        '<button type="button" class="bootbox-close-button close" aria-hidden="true">&times;</button>',
     form:
-    '<form class="bootbox-form"></form>',
+        '<form class="bootbox-form"></form>',
     button:
-    '<button type="button" class="btn"></button>',
+        '<button type="button" class="btn"></button>',
     option:
-    '<option></option>',
+        '<option></option>',
     promptMessage:
-    '<div class="bootbox-prompt-message"></div>',
+        '<div class="bootbox-prompt-message"></div>',
     inputs: {
       text:
-      '<input class="bootbox-input bootbox-input-text form-control" autocomplete="off" type="text" />',
+          '<input class="bootbox-input bootbox-input-text form-control" autocomplete="off" type="text" />',
       textarea:
-      '<textarea class="bootbox-input bootbox-input-textarea form-control"></textarea>',
+          '<textarea class="bootbox-input bootbox-input-textarea form-control"></textarea>',
       email:
-      '<input class="bootbox-input bootbox-input-email form-control" autocomplete="off" type="email" />',
+          '<input class="bootbox-input bootbox-input-email form-control" autocomplete="off" type="email" />',
       select:
-      '<select class="bootbox-input bootbox-input-select form-control"></select>',
+          '<select class="bootbox-input bootbox-input-select form-control"></select>',
       checkbox:
-      '<div class="form-check checkbox"><label class="form-check-label"><input class="form-check-input bootbox-input bootbox-input-checkbox" type="checkbox" /></label></div>',
+          '<div class="form-check checkbox"><label class="form-check-label"><input class="form-check-input bootbox-input bootbox-input-checkbox" type="checkbox" /></label></div>',
       radio:
-      '<div class="form-check radio"><label class="form-check-label"><input class="form-check-input bootbox-input bootbox-input-radio" type="radio" name="bootbox-radio" /></label></div>',
+          '<div class="form-check radio"><label class="form-check-label"><input class="form-check-input bootbox-input bootbox-input-radio" type="radio" name="bootbox-radio" /></label></div>',
       date:
-      '<input class="bootbox-input bootbox-input-date form-control" autocomplete="off" type="date" />',
+          '<input class="bootbox-input bootbox-input-date form-control" autocomplete="off" type="date" />',
       time:
-      '<input class="bootbox-input bootbox-input-time form-control" autocomplete="off" type="time" />',
+          '<input class="bootbox-input bootbox-input-time form-control" autocomplete="off" type="time" />',
       number:
-      '<input class="bootbox-input bootbox-input-number form-control" autocomplete="off" type="number" />',
+          '<input class="bootbox-input bootbox-input-number form-control" autocomplete="off" type="number" />',
       password:
-      '<input class="bootbox-input bootbox-input-password form-control" autocomplete="off" type="password" />',
+          '<input class="bootbox-input bootbox-input-password form-control" autocomplete="off" type="password" />',
       range:
-      '<input class="bootbox-input bootbox-input-range form-control-range" autocomplete="off" type="range" />'
+          '<input class="bootbox-input bootbox-input-range form-control-range" autocomplete="off" type="range" />'
     }
   };
 
 
-  var defaults = {
+  const defaults = {
     // default language
     locale: 'en',
     // show backdrop or not. Default to static so user has to interact with dialog
@@ -401,7 +402,7 @@
 
   // Override default value(s) of Bootbox.
   exports.setDefaults = function () {
-    var values = {};
+    let values = {};
 
     if (arguments.length === 2) {
       // allow passing of single key/value...
@@ -448,7 +449,7 @@
 
     if ($.fn.modal.Constructor.VERSION) {
       options.fullBootstrapVersion = $.fn.modal.Constructor.VERSION;
-      var i = options.fullBootstrapVersion.indexOf('.');
+      const i = options.fullBootstrapVersion.indexOf('.');
       options.bootstrap = options.fullBootstrapVersion.substring(0, i);
     }
     else {
@@ -458,14 +459,14 @@
       console.warn('Bootbox will *mostly* work with Bootstrap 2, but we do not officially support it. Please upgrade, if possible.');
     }
 
-    var dialog = $(templates.dialog);
-    var innerDialog = dialog.find('.modal-dialog');
-    var body = dialog.find('.modal-body');
-    var header = $(templates.header);
-    var footer = $(templates.footer);
-    var buttons = options.buttons;
+    const dialog = $(templates.dialog);
+    const innerDialog = dialog.find('.modal-dialog');
+    const body = dialog.find('.modal-body');
+    const header = $(templates.header);
+    const footer = $(templates.footer);
+    const buttons = options.buttons;
 
-    var callbacks = {
+    const callbacks = {
       onEscape: options.onEscape
     };
 
@@ -475,7 +476,7 @@
     // been defined in the options object
     if (getKeyLength(options.buttons) > 0) {
       each(buttons, function (key, b) {
-        var button = $(templates.button);
+        const button = $(templates.button);
         button.data('bb-handler', key);
         button.addClass(b.className);
 
@@ -552,7 +553,7 @@
     }
 
     if (options.closeButton) {
-      var closeButton = $(templates.closeButton);
+      const closeButton = $(templates.closeButton);
 
       if (options.title) {
         if (options.bootstrap > 3) {
@@ -638,7 +639,7 @@
 
 
     dialog.on('click', '.modal-footer button:not(.disabled)', function (e) {
-      var callbackKey = $(this).data('bb-handler');
+      const callbackKey = $(this).data('bb-handler');
 
       if (callbackKey !== undefined) {
         // Only process callbacks for buttons we recognize:
@@ -684,7 +685,7 @@
   // code that must happen after the alert is dismissed should be placed within the callback function 
   // for this alert.
   exports.alert = function () {
-    var options;
+    let options;
 
     options = mergeDialogOptions('alert', ['ok'], ['message', 'callback'], arguments);
 
@@ -712,7 +713,7 @@
   // code that must happen after the confirm is dismissed should be placed within the callback function 
   // for this confirm.
   exports.confirm = function () {
-    var options;
+    let options;
 
     options = mergeDialogOptions('confirm', ['cancel', 'confirm'], ['message', 'callback'], arguments);
 
@@ -739,12 +740,12 @@
   // code that must happen after the prompt is dismissed should be placed within the callback function 
   // for this prompt.
   exports.prompt = function () {
-    var options;
-    var promptDialog;
-    var form;
-    var input;
-    var shouldShow;
-    var inputOptions;
+    let options;
+    let promptDialog;
+    let form;
+    let input;
+    let shouldShow;
+    let inputOptions;
 
     // we have to create our form first otherwise
     // its value is undefined when gearing up our options
@@ -780,7 +781,7 @@
     // Prompt submitted - extract the prompt value. This requires a bit of work, 
     // given the different input types available.
     options.buttons.confirm.callback = function () {
-      var value;
+      let value;
 
       if (options.inputType === 'checkbox') {
         value = input.find('input:checked').map(function () {
@@ -902,7 +903,7 @@
 
 
       case 'select':
-        var groups = {};
+        const groups = {};
         inputOptions = options.inputOptions || [];
 
         if (!$.isArray(inputOptions)) {
@@ -929,7 +930,7 @@
         
         each(inputOptions, function (_, option) {
           // assume the element to attach to is the input...
-          var elem = input;
+          let elem = input;
 
           if (option.value === undefined || option.text === undefined) {
             throw new Error('each option needs a "value" property and a "text" property');
@@ -946,7 +947,7 @@
             elem = groups[option.group];
           }
 
-          var o = $(templates.option);
+          const o = $(templates.option);
           o.attr('value', option.value).text(option.text);
           elem.append(o);
         });
@@ -962,7 +963,7 @@
 
 
       case 'checkbox':
-        var checkboxValues = $.isArray(options.value) ? options.value : [options.value];
+        const checkboxValues = $.isArray(options.value) ? options.value : [options.value];
         inputOptions = options.inputOptions || [];
 
         if (!inputOptions.length) {
@@ -979,7 +980,7 @@
             throw new Error('each option needs a "value" property and a "text" property');
           }
 
-          var checkbox = $(templates.inputs[options.inputType]);
+          const checkbox = $(templates.inputs[options.inputType]);
 
           checkbox.find('input').attr('value', option.value);
           checkbox.find('label').append('\n' + option.text);
@@ -1015,14 +1016,14 @@
 
         // Radiobuttons should always have an initial checked input checked in a "group".
         // If value is undefined or doesn't match an input option, select the first radiobutton
-        var checkFirstRadio = true;
+        let checkFirstRadio = true;
 
         each(inputOptions, function (_, option) {
           if (option.value === undefined || option.text === undefined) {
             throw new Error('each option needs a "value" property and a "text" property');
           }
 
-          var radio = $(templates.inputs[options.inputType]);
+          const radio = $(templates.inputs[options.inputType]);
 
           radio.find('input').attr('value', option.value);
           radio.find('label').append('\n' + option.text);
@@ -1058,7 +1059,7 @@
 
     if ($.trim(options.message) !== '') {
       // Add the form to whatever content the user may have added.
-      var message = $(templates.promptMessage).html(options.message);
+      const message = $(templates.promptMessage).html(options.message);
       form.prepend(message);
       options.message = form;
     }
@@ -1098,8 +1099,8 @@
   //  mapArguments(["foo", $.noop], ["message", "callback"])
   //  -> { message: "foo", callback: $.noop }
   function mapArguments(args, properties) {
-    var argn = args.length;
-    var options = {};
+    const argn = args.length;
+    let options = {};
 
     if (argn < 1 || argn > 2) {
       throw new Error('Invalid argument length');
@@ -1138,10 +1139,10 @@
   //  This entry-level method makes heavy use of composition to take a simple
   //  range of inputs and return valid options suitable for passing to bootbox.dialog
   function mergeDialogOptions(className, labels, properties, args) {
-    var locale;
+    let locale;
     if(args && args[0]){
       locale = args[0].locale || defaults.locale;
-      var swapButtons = args[0].swapButtonOrder || defaults.swapButtonOrder;
+      const swapButtons = args[0].swapButtonOrder || defaults.swapButtonOrder;
 
       if(swapButtons){
         labels = labels.reverse();
@@ -1149,7 +1150,7 @@
     }
 
     //  build up a base set of dialog properties
-    var baseOptions = {
+    const baseOptions = {
       className: 'bootbox-' + className,
       buttons: createLabels(labels, locale)
     };
@@ -1172,7 +1173,7 @@
   //  Checks each button object to see if key is valid. 
   //  This function will only be called by the alert, confirm, and prompt helpers. 
   function validateButtons(options, buttons) {
-    var allowedButtons = {};
+    const allowedButtons = {};
     each(buttons, function (key, value) {
       allowedButtons[value] = true;
     });
@@ -1192,12 +1193,14 @@
   //  All this does is normalise the given labels and translate them where possible.
   //  e.g. "ok", "confirm" -> { ok: "OK", cancel: "Annuleren" }
   function createLabels(labels, locale) {
-    var buttons = {};
+    const buttons = {};
 
-    for (var i = 0, j = labels.length; i < j; i++) {
-      var argument = labels[i];
-      var key = argument.toLowerCase();
-      var value = argument.toUpperCase();
+    let i = 0;
+    const j = labels.length;
+    for (; i < j; i++) {
+      const argument = labels[i];
+      const key = argument.toLowerCase();
+      const value = argument.toUpperCase();
 
       buttons[key] = {
         label: getText(value, locale)
@@ -1212,7 +1215,7 @@
   //  Get localized text from a locale. Defaults to 'en' locale if no locale 
   //  provided or a non-registered locale is requested
   function getText(key, locale) {
-    var labels = locales[locale];
+    const labels = locales[locale];
 
     return labels ? labels[key] : locales.en[key];
   }
@@ -1223,8 +1226,8 @@
   //  Also looks for any shorthands used and ensures that the options
   //  which are returned are all normalized properly
   function sanitize(options) {
-    var buttons;
-    var total;
+    let buttons;
+    let total;
 
     if (typeof options !== 'object') {
       throw new Error('Please supply an object of options');
@@ -1266,8 +1269,8 @@
         button.label = key;
       }
 
-      if (!button.className) {     
-        var isPrimary = false;
+      if (!button.className) {
+        let isPrimary = false;
         if(options.swapButtonOrder){
           isPrimary = index === 0;
         }
@@ -1297,7 +1300,7 @@
 
   //  Tiny wrapper function around jQuery.each; just adds index as the third parameter
   function each(collection, iterator) {
-    var index = 0;
+    let index = 0;
     $.each(collection, function (key, value) {
       iterator(key, value, index++);
     });
@@ -1314,7 +1317,7 @@
 
     // so, if the callback can be invoked and it *explicitly returns false*
     // then we'll set a flag to keep the dialog active...
-    var preserveDialog = $.isFunction(callback) && callback.call(dialog, e) === false;
+    const preserveDialog = $.isFunction(callback) && callback.call(dialog, e) === false;
 
     // ... otherwise we'll bin it
     if (!preserveDialog) {
@@ -1324,9 +1327,9 @@
   
   // Validate `min` and `max` values based on the current `inputType` value
   function minAndMaxAreValid(type, min, max){
-    var result = false;
-    var minValid = true;
-    var maxValid = true;
+    let result = false;
+    let minValid = true;
+    let maxValid = true;
 
     if (type === 'date') {
       if (min !== undefined && !(minValid = dateIsValid(min))) {

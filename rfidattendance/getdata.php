@@ -205,4 +205,3 @@ if (isset($_GET['card_uid']) && isset($_GET['device_token'])) {
         }
     }          
 }
-?>

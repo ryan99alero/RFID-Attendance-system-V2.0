@@ -3,8 +3,8 @@ $(document).ready(function(){
 	//Add Device 
 	$(document).on('click', '#dev_add', function(){
 
-		var dev_name = $('#dev_name').val();
-		var dev_dep = $('#dev_dep').val();
+		const dev_name = $('#dev_name').val();
+		const dev_dep = $('#dev_dep').val();
 
 		$.ajax({
 		  url: 'dev_config.php',
@@ -52,8 +52,8 @@ $(document).ready(function(){
 	//Device Token update
 	$(document).on('click', '.dev_uid_up', function(){
 
-		var el = this;
-		var dev_id = $(this).data('id');
+		const el = this;
+		const dev_id = $(this).data('id');
 
 		bootbox.confirm("Do you really want to Update this Device Token?", function(result) {
 			if(result){
@@ -106,8 +106,8 @@ $(document).ready(function(){
 	//Delete Device
 	$(document).on('click', '.dev_del', function(){
 
-		var el = this;
-		var deleteid = $(this).data('id');
+		const el = this;
+		const deleteid = $(this).data('id');
 
 		bootbox.confirm("Do you really want to delete this Device?", function(result) {
 		if(result){
@@ -156,9 +156,9 @@ $(document).ready(function(){
 	//Device Mode
 	$(document).on('click', '.mode_sel', function(){
 
-		var el = this;
-    	var dev_mode = $(this).attr("value");
-		var dev_id = $(this).data('id');
+		const el = this;
+		const dev_mode = $(this).attr("value");
+		const dev_id = $(this).data('id');
 
 		bootbox.confirm("Do you really want to change this Device Mode?", function(result) {
 			if(result){

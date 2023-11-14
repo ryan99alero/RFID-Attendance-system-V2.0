@@ -14,7 +14,10 @@ if (isset($_POST['dev_add'])) {
         echo '<p class="alert alert-danger">Please, Set the device department!!</p>';
     }
     else{
-        $token = random_bytes(8);
+        try {
+            $token = random_bytes(8);
+        } catch (Exception $e) {
+        }
         $dev_token = bin2hex($token);
 
         $sql = "INSERT INTO devices (device_name, device_dep, device_uid, device_date) VALUES(?, ?, ?, CURDATE())";
@@ -52,7 +55,10 @@ elseif (isset($_POST['dev_uid_up'])) {
     
     $dev_id = $_POST['dev_id_up'];
 
-    $token = random_bytes(8);
+    try {
+        $token = random_bytes(8);
+    } catch (Exception $e) {
+    }
     $dev_token = bin2hex($token);
 
     $sql = "UPDATE devices SET device_uid=? WHERE id=?";
@@ -105,11 +111,11 @@ elseif (isset($_POST['update'])) {
             $resultl = mysqli_stmt_get_result($result);
             if ($row = mysqli_fetch_assoc($resultl)) {
                 $pwdCheck = password_verify($up_password, $row['user_pwd']);
-                if ($pwdCheck == false) {
+                if (!$pwdCheck) {
                     header("location: account.php?error=wrongpassword");
                     exit();
                 }
-                else if ($pwdCheck == true) {
+                else if ($pwdCheck) {
                     if ($useremail == $up_email) {
                         $sql = "UPDATE users SET user_name=? WHERE user_email=?";
                         $stmt = mysqli_stmt_init($conn);
@@ -188,4 +194,3 @@ else{
     exit();
 }
 //*********************************************************************************
-?>

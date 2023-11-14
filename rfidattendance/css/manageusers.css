@@ -95,22 +95,20 @@ td{
 .form-style-5 select,
 .form-style-5 input[type="time"] {
   font-family: Georgia, "Times New Roman", Times, serif;
-  background: rgba(255,255,255,.1);
   border: none;
   border-radius: 4px;
   font-size: 14px;
-  margin: 0;
   outline: 0;
   padding: 10px;
   width: 100%;
   box-sizing: border-box; 
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box; 
-  background-color: #e8eeef;
+  -moz-box-sizing: border-box;
+  background: #e8eeef;
   color:#8a97a0;
   -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
-  margin-bottom: 30px;
+  margin: 0 0 30px;
   border: 1px solid #e8eeef;
 }
 .form-style-5 input[type="text"]:focus,
@@ -150,7 +148,6 @@ td{
   display: block;
   padding: 10px 39px 10px 39px;
   color: #FFF;
-  margin: 0 auto;
   background: #388994;
   font-size: 16px;
   text-align: center;
@@ -158,7 +155,7 @@ td{
   width: 100%;
   border: 1px solid #3f9aa6;
   border-width: 1px 1px 3px;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
 }
 .form-style-5 button:hover {
   background: #3f9aa6;

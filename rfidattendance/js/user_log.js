@@ -1,15 +1,15 @@
 $(document).ready(function(){
   // Get Report passenger
   $(document).on('click', '#user_log', function(){
-    
-    var date_sel_start = $('#date_sel_start').val();
-    var date_sel_end = $('#date_sel_end').val();
-    var time_sel = $(".time_sel:checked").val();
-    var time_sel_start = $('#time_sel_start').val();
-    var time_sel_end = $('#time_sel_end').val();
-    var card_sel = $('#card_sel option:selected').val();
-    var dev_uid = $('#dev_sel option:selected').val();
-    
+
+    const date_sel_start = $('#date_sel_start').val();
+    const date_sel_end = $('#date_sel_end').val();
+    const time_sel = $(".time_sel:checked").val();
+    const time_sel_start = $('#time_sel_start').val();
+    const time_sel_end = $('#time_sel_end').val();
+    const card_sel = $('#card_sel option:selected').val();
+    const dev_uid = $('#dev_sel option:selected').val();
+
     $.ajax({
       url: 'user_log_up.php',
       type: 'POST',

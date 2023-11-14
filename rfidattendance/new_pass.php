@@ -3,7 +3,7 @@ session_start();
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Password Reset</title>
     <meta charset="utf-8">
@@ -13,7 +13,7 @@ session_start();
     <script src="js/jquery-2.2.3.min.js"></script>
     <script>
       $(window).on("load resize ", function() {
-          var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+          const scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
           $('.tbl-header').css({'padding-right':scrollWidth});
       }).resize();
     </script>
@@ -45,7 +45,7 @@ session_start();
                         Could not validate your request, please retry!!
                       </div>';
             }
-            elseif (!empty($_GET['selector']) && !empty($_GET['validator'])) {
+            elseif (!empty($_GET['selector'])) {
               $selector = $_GET['selector'];
               $validator = $_GET['validator'];
             

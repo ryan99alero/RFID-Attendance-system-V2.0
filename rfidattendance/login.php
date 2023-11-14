@@ -5,7 +5,7 @@ if (isset($_SESSION['Admin-name'])) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Log In</title>
     <meta charset="utf-8">
@@ -15,7 +15,7 @@ if (isset($_SESSION['Admin-name'])) {
     <script src="js/jquery-2.2.3.min.js"></script>
     <script>
       $(window).on("load resize ", function() {
-          var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+          const scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
           $('.tbl-header').css({'padding-right':scrollWidth});
       }).resize();
     </script>
