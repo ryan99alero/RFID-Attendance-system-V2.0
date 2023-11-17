@@ -1,28 +1,28 @@
 <?php
-	//Connect to database
-    $servername = "localhost";
-    $username = "root";		//put your phpmyadmin username.(default is "root")
-    $password = "";			//if your phpmyadmin has a password put it here.(default is "root")
-    $dbname = "";
-    
-	$conn = new mysqli($servername, $username, $password, $dbname);
+//Connect to database
+$servername = "localhost";
+$username = "root";        //put your phpmyadmin username.(default is "root")
+$password = "";            //if your phpmyadmin has a password put it here.(default is "root")
+$dbname = "";
 
-	// Create database
-	$sql = "CREATE DATABASE biometricattendace";
-	if ($conn->query($sql) === TRUE) {
-	    echo "Database created successfully";
-	} else {
-	    echo "Error creating database: " . $conn->error;
-	}
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-	echo "<br>";
+// Create database
+$sql = "CREATE DATABASE biometricattendace";
+if ($conn->query($sql) === TRUE) {
+    echo "Database created successfully";
+} else {
+    echo "Error creating database: " . $conn->error;
+}
 
-	$dbname = "biometricattendace";
-    
-	$conn = new mysqli($servername, $username, $password, $dbname);
+echo "<br>";
 
-	// sql to create table
-	$sql = "CREATE TABLE IF NOT EXISTS `users` (
+$dbname = "biometricattendace";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// sql to create table
+$sql = "CREATE TABLE IF NOT EXISTS `users` (
 			`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 			`username` varchar(100) NOT NULL,
 			`serialnumber` double NOT NULL,
@@ -36,13 +36,13 @@
 			`add_fingerid` tinyint(1) NOT NULL DEFAULT '0'
 	) ENGINE=InnoDB DEFAULT CHARSET=latin1";
 
-	if ($conn->query($sql) === TRUE) {
-	    echo "Table users created successfully";
-	} else {
-	    echo "Error creating table: " . $conn->error;
-	}
+if ($conn->query($sql) === TRUE) {
+    echo "Table users created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
 
-	$sql = "CREATE TABLE IF NOT EXISTS `users_logs` (
+$sql = "CREATE TABLE IF NOT EXISTS `users_logs` (
 			`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 			`username` varchar(100) NOT NULL,
 			`serialnumber` double NOT NULL,
@@ -52,10 +52,10 @@
 			`timeout` time NOT NULL
 	) ENGINE=InnoDB DEFAULT CHARSET=latin1";
 
-	if ($conn->query($sql) === TRUE) {
-	    echo "Table users_logs created successfully";
-	} else {
-	    echo "Error creating table: " . $conn->error;
-	}
-		
-	$conn->close();
+if ($conn->query($sql) === TRUE) {
+    echo "Table users_logs created successfully";
+} else {
+    echo "Error creating table: " . $conn->error;
+}
+
+$conn->close();
