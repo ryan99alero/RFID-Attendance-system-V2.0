@@ -1,4 +1,4 @@
-h1 {
+h1{
     font-size: 28px !important;
     color: #000;
     text-transform: uppercase;
@@ -7,37 +7,31 @@ h1 {
     text-align: center;
     margin: 15px !important;
 }
-
-th {
+th{
     padding: 15px;
     text-align: center !important;
     font-weight: 500;
     font-size: 19px;
     color: #000;
 }
-
-td {
+td{
     padding: 15px;
     text-align: center;
     font-weight: 300;
     font-size: 17px;
     color: #fff;
-    border-bottom: solid 2px rgba(255, 255, 255, 0.1);
+    border-bottom: solid 2px rgba(255,255,255,0.1);
 }
-
 section {
     display: block;
     margin: 20px auto;
 }
-
 .panel {
     border-color: #388994 !important;
 }
-
 .panel-heading {
     background-color: #388994 !important;
 }
-
 .panel-body {
     background-color: #46abb9 !important;
 }
@@ -46,7 +40,6 @@ section {
     display: block;
     position: relative;
 }
-
 .mode_select input {
     position: absolute !important;
     clip: rect(0, 0, 0, 0);
@@ -83,4 +76,8 @@ section {
     top: 20px;
     right: 20px;
 }
-
+.alert_dev_del {
+    position: absolute;
+    right: 20px;
+    height: 30px;
+}

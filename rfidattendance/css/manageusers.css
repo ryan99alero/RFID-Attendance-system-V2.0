@@ -1,4 +1,4 @@
-h1 {
+h1{
     font-size: 28px !important;
     color: #000;
     text-transform: uppercase;
@@ -7,11 +7,9 @@ h1 {
     text-align: center;
     margin: 15px !important;
 }
-
-tbody {
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+tbody{
+    border: 1px solid rgba(255,255,255,0.3) !important;
 }
-
 tbody button {
     background-color: transparent;
     border: none;
@@ -20,14 +18,12 @@ tbody button {
     border-bottom: 2px solid #0e2225;
     color: #0e2225;
 }
-
 tbody button:hover {
     cursor: pointer;
     border-bottom: 2px solid #3e9ba8;
     color: black;
 }
-
-th {
+th{
     padding: 15px;
     text-align: center !important;
     font-weight: 500;
@@ -35,16 +31,15 @@ th {
     color: #000;
     text-transform: uppercase;
     border: none !important;
-    background-color: rgba(255, 255, 255, 0.3) !important;
+    background-color: rgba(255,255,255,0.3) !important;
 }
-
-td {
+td{
     padding: 15px;
     text-align: center;
     font-weight: 300;
     font-size: 14px;
     color: #fff;
-    border-bottom: solid 2px rgba(255, 255, 255, 0.1);
+    border-bottom: solid 2px rgba(255,255,255,0.1);
 }
 
 .section {
@@ -56,27 +51,22 @@ td {
     top: 219px;
     right: 0;
 }
-
 .section span {
     float: left;
     display: block;
     position: absolute;
     margin: 0 0 0 5px;
 }
-
 ::-webkit-scrollbar {
     width: 6px;
 }
-
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
-
 ::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
-
-.form-style-5 {
+.form-style-5{
     max-width: 490px;
     height: 650px;
     padding: 30px 20px;
@@ -86,46 +76,43 @@ td {
     border-radius: 8px;
     font-family: Georgia, "Times New Roman", Times, serif;
 }
-
-.form-style-5 fieldset {
+.form-style-5 fieldset{
     border: none;
     margin-top: 0;
 }
-
 .form-style-5 legend {
     font-size: 1.4em;
     margin-bottom: 10px;
 }
-
 .form-style-5 label {
     display: block;
     margin-bottom: 8px;
     font-family: Verdana, sans-serif;
 }
-
 .form-style-5 input[type="text"],
 .form-style-5 input[type="email"],
 .form-style-5 input[type="number"],
 .form-style-5 select,
 .form-style-5 input[type="time"] {
     font-family: Georgia, "Times New Roman", Times, serif;
+    background: rgba(255,255,255,.1);
     border: none;
     border-radius: 4px;
     font-size: 14px;
+    margin: 0;
     outline: 0;
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    background: #e8eeef;
-    color: #8a97a0;
-    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-    margin: 0 0 30px;
+    background-color: #e8eeef;
+    color:#8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
     border: 1px solid #e8eeef;
 }
-
 .form-style-5 input[type="text"]:focus,
 .form-style-5 input[type="email"]:focus,
 .form-style-5 select:focus,
@@ -134,19 +121,16 @@ td {
     background: #d2d9dd;
     color: #000;
 }
-
 .form-style-5 input[type="text"]:hover,
 .form-style-5 input[type="email"]:hover,
 .form-style-5 input[type="number"]:hover,
 .form-style-5 input[type="time"]:hover {
     border: 1px solid #388994;
 }
-
 .form-style-5 select:hover,
 .form-style-5 input[type="radio"]:hover {
     cursor: pointer;
 }
-
 .form-style-5 .number {
     background: #388994;
     color: #fff;
@@ -157,7 +141,7 @@ td {
     margin-right: 4px;
     line-height: 30px;
     text-align: center;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
     border-radius: 15px 15px 15px 0px;
 }
 
@@ -166,6 +150,7 @@ td {
     display: block;
     padding: 10px 39px 10px 39px;
     color: #FFF;
+    margin: 0 auto;
     background: #388994;
     font-size: 16px;
     text-align: center;
@@ -173,14 +158,12 @@ td {
     width: 100%;
     border: 1px solid #3f9aa6;
     border-width: 1px 1px 3px;
-    margin: 0 auto 10px;
+    margin-bottom: 10px;
 }
-
 .form-style-5 button:hover {
     background: #3f9aa6;
     cursor: pointer;
 }
-
 .form-style-5 .alert_user {
     display: block;
     position: absolute;
@@ -204,22 +187,18 @@ td {
         margin: 20px 2px;
         padding: 20px;
     }
-
     .section img {
         width: 15px;
         margin: 3px;
     }
-
     h1 {
         font-size: 19px !important;
         padding: 5px 8px !important;
     }
-
     th {
         font-size: 12px;
         padding: 10px 2px;
     }
-
     td {
         font-size: 11px;
         padding: 4px 2px;
@@ -227,17 +206,14 @@ td {
 }
 
 .section {
-    overflow-x: hidden;
+    overflow-x:hidden;
 }
-
 .slideInRight {
     animation-name: slideInRight;
 }
-
 .slideInDown {
     animation-name: slideInDown;
 }
-
 .animated {
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -253,7 +229,6 @@ td {
         transform: translate3d(0, 0, 0);
     }
 }
-
 @keyframes slideInDown {
     from {
         transform: translate3d(0, 100%, 0);
