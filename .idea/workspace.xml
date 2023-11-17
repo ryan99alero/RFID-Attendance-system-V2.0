@@ -10,8 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9ee3cb4-4d19-4a47-9751-b3f5baf54885" name="Changes" comment="PHPStorm Code Cleanup">
-      <change beforePath="$PROJECT_DIR$/rfidattendance/UsersLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/rfidattendance/UsersLog.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rfidattendance/css/userslog.css" beforeDir="false" afterPath="$PROJECT_DIR$/rfidattendance/css/Punches.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +21,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="AdditionalUserFields" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -80,7 +84,7 @@
       <workItem from="1699933906365" duration="672000" />
       <workItem from="1699934590223" duration="5886000" />
       <workItem from="1699988294890" duration="624000" />
-      <workItem from="1700197789751" duration="6280000" />
+      <workItem from="1700197789751" duration="6691000" />
     </task>
     <task id="LOCAL-00001" summary="PHPStorm Code Cleanup">
       <option name="closed" value="true" />
@@ -130,7 +134,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700205272843</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="PHPStorm Code Cleanup">
+      <option name="closed" value="true" />
+      <created>1700205678273</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700205678273</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
