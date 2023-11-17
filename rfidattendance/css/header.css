@@ -35,11 +35,6 @@ header, main {
     display: block;
 }
 
-#navbar {
-    overflow: hidden;
-    background-color: #333;
-}
-
 #navbar a {
     float: left;
     display: block;
@@ -104,9 +99,6 @@ header, main {
 }
 
 @media screen and (max-width: 600px) {
-    .topnav.responsive {
-        position: relative;
-    }
 
     .topnav.responsive .icon {
         position: absolute;
@@ -120,9 +112,6 @@ header, main {
         text-align: left;
     }
 
-    .modalss-content {
-        width: 90% !important;
-    }
 }
 
 tbody tr:nth-child(even) {
@@ -139,11 +128,6 @@ tbody tr:hover {
 
 h3 {
     padding: 15px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
 }
 
 .bootbox-body {

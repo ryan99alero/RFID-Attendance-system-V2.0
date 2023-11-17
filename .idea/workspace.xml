@@ -2,7 +2,7 @@
 <project version="4">
   <component name="AnalysisUIOptions">
     <option name="AUTOSCROLL_TO_SOURCE" value="true" />
-    <option name="SPLITTER_PROPORTION" value="0.33981338" />
+    <option name="SPLITTER_PROPORTION" value="0.35147744" />
     <option name="ANALYZE_INJECTED_CODE" value="false" />
   </component>
   <component name="AutoImportSettings">
@@ -10,7 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9ee3cb4-4d19-4a47-9751-b3f5baf54885" name="Changes" comment="PHPStorm Code Cleanup">
-      <change beforePath="$PROJECT_DIR$/rfidattendance/UsersLog.php" beforeDir="false" afterPath="$PROJECT_DIR$/rfidattendance/UsersLog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rfidattendance/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/rfidattendance/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rfidattendance/css/devices.css" beforeDir="false" afterPath="$PROJECT_DIR$/rfidattendance/css/devices.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rfidattendance/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/rfidattendance/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rfidattendance/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/rfidattendance/css/login.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +84,7 @@
       <workItem from="1699933906365" duration="672000" />
       <workItem from="1699934590223" duration="5886000" />
       <workItem from="1699988294890" duration="624000" />
-      <workItem from="1700197789751" duration="1024000" />
+      <workItem from="1700197789751" duration="3475000" />
     </task>
     <task id="LOCAL-00001" summary="PHPStorm Code Cleanup">
       <option name="closed" value="true" />
@@ -89,7 +94,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699938270267</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="PHPStorm Code Cleanup">
+      <option name="closed" value="true" />
+      <created>1700199011029</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700199011029</updated>
+    </task>
+    <task id="LOCAL-00003" summary="PHPStorm Code Cleanup">
+      <option name="closed" value="true" />
+      <created>1700199019344</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700199019344</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
