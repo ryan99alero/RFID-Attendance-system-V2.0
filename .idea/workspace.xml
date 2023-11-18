@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9ee3cb4-4d19-4a47-9751-b3f5baf54885" name="Changes" comment="PHPStorm Code Cleanup">
+    <list default="true" id="a9ee3cb4-4d19-4a47-9751-b3f5baf54885" name="Changes" comment="Added a Arduino INO for ESP32 with Ethernet.  Also added code directories for the OLED display I'm using.  Will update arduino code to implement the OLED display.">
       <change afterPath="$PROJECT_DIR$/ESP32_RFID/ESP32_RFID_Ethernete.ino" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/ESP32_RFID/test.ino" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -73,6 +73,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ESP32_RFID" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -88,7 +93,7 @@
       <workItem from="1699933906365" duration="672000" />
       <workItem from="1699934590223" duration="5886000" />
       <workItem from="1699988294890" duration="624000" />
-      <workItem from="1700197789751" duration="15015000" />
+      <workItem from="1700197789751" duration="15349000" />
     </task>
     <task id="LOCAL-00001" summary="PHPStorm Code Cleanup">
       <option name="closed" value="true" />
@@ -185,7 +190,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="PHPStorm Code Cleanup" />
-    <option name="LAST_COMMIT_MESSAGE" value="PHPStorm Code Cleanup" />
+    <MESSAGE value="Added a Arduino INO for ESP32 with Ethernet.  Also added code directories for the OLED display I'm using.  Will update arduino code to implement the OLED display." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a Arduino INO for ESP32 with Ethernet.  Also added code directories for the OLED display I'm using.  Will update arduino code to implement the OLED display." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
