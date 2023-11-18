@@ -54,36 +54,47 @@ if (!isset($_SESSION['Admin-name'])) {
             <fieldset>
                 <legend><span class="number">1</span> User Info</legend>
                 <input type="hidden" name="user_id" id="user_id">
-                <input type="text" name="name" id="name" placeholder="User Name...">
-                <input type="text" name="number" id="number" placeholder="Serial Number...">
+                <input type="text" name="first_name" id="first_name" placeholder="First Name...">
+                <input type="text" name="last_name" id="last_name" placeholder="Last Name...">
                 <input type="email" name="email" id="email" placeholder="User Email...">
+                <input type="text" name="phone" id="phone" placeholder="Phone Number...">
+                <input type="text" name="address" id="address" placeholder="Address...">
+                <input type="text" name="city" id="city" placeholder="City...">
+                <input type="text" name="state" id="state" placeholder="State...">
+                <input type="text" name="zip" id="zip" placeholder="Zip...">
+                <input type="text" name="country" id="country" placeholder="Country...">
+                <input type="text" name="short_name" id="short_name" placeholder="Short Name...">
+                <input type="text" name="payroll_id" id="payroll_id" placeholder="Payroll ID...">
+                <input type="text" name="manager" id="manager" placeholder="Manager...">
+                <input type="text" name="ssn" id="ssn" placeholder="Social Security Number...">
+                <input type="date" name="start_date" id="start_date" placeholder="Start Date...">
+                <input type="text" name="vacation_time" id="vacation_time" placeholder="Vacation Time...">
+                <!-- Additional fields as per your requirement -->
             </fieldset>
             <fieldset>
                 <legend><span class="number">2</span> Additional Info</legend>
-                <label>
-                    <label for="Device"><b>User Department:</b></label>
-                    <select class="dev_sel" name="dev_sel" id="dev_sel" style="color: #000;">
-                        <option value="0">All Departments</option>
-                        <?php
-                        require 'connectDB.php';
-                        $sql = "SELECT * FROM devices ORDER BY device_name ASC";
-                        $result = mysqli_stmt_init($conn);
-                        if (!mysqli_stmt_prepare($result, $sql)) {
-                            echo '<p class="error">SQL Error</p>';
-                        } else {
-                            mysqli_stmt_execute($result);
-                            $resultl = mysqli_stmt_get_result($result);
-                            while ($row = mysqli_fetch_assoc($resultl)) {
-                                ?>
-                                <option value="<?php echo $row['device_uid']; ?>"><?php echo $row['device_dep']; ?></option>
-                                <?php
-                            }
+                <label for="Device"><b>User Department:</b></label>
+                <select class="dev_sel" name="dev_sel" id="dev_sel" style="color: #000;">
+                    <option value="0">All Departments</option>
+                    <?php
+                    require 'connectDB.php';
+                    $sql = "SELECT * FROM devices ORDER BY device_name ASC";
+                    $result = mysqli_stmt_init($conn);
+                    if (!mysqli_stmt_prepare($result, $sql)) {
+                        echo '<p class="error">SQL Error</p>';
+                    } else {
+                        mysqli_stmt_execute($result);
+                        $resultl = mysqli_stmt_get_result($result);
+                        while ($row = mysqli_fetch_assoc($resultl)) {
+                            ?>
+                            <option value="<?php echo $row['device_uid']; ?>"><?php echo $row['device_dep']; ?></option>
+                            <?php
                         }
-                        ?>
-                    </select>
-                    <input type="radio" name="gender" class="gender" value="Female">Female
-                    <input type="radio" name="gender" class="gender" value="Male" checked="checked">Male
-                </label>
+                    }
+                    ?>
+                </select>
+                <input type="radio" name="gender" class="gender" value="Female">Female
+                <input type="radio" name="gender" class="gender" value="Male" checked="checked">Male
             </fieldset>
             <button type="button" name="user_add" class="user_add">Add User</button>
             <button type="button" name="user_upd" class="user_upd">Update User</button>
@@ -93,7 +104,6 @@ if (!isset($_SESSION['Admin-name'])) {
 
     <!--User table-->
     <div class="section">
-
         <div class="slideInRight animated">
             <div id="manage_users"></div>
         </div>
