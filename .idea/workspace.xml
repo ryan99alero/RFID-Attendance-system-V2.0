@@ -10,11 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9ee3cb4-4d19-4a47-9751-b3f5baf54885" name="Changes" comment="Added a Arduino INO for ESP32 with Ethernet.  Also added code directories for the OLED display I'm using.  Will update arduino code to implement the OLED display.">
-      <change afterPath="$PROJECT_DIR$/ESP32_RFID/ESP32_RFID_Ethernete.ino" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ESP32_RFID/test.ino" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ESP32_RFID/ESP32_RFID.ino" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/ESP32_RFID.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rfidattendance/ManageUsers.php" beforeDir="false" afterPath="$PROJECT_DIR$/rfidattendance/ManageUsers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/ESP32_RFID_Ethernete.ino" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/ESP32_RFID_Ethernete.ino" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +90,7 @@
       <workItem from="1699933906365" duration="672000" />
       <workItem from="1699934590223" duration="5886000" />
       <workItem from="1699988294890" duration="624000" />
-      <workItem from="1700197789751" duration="15349000" />
+      <workItem from="1700197789751" duration="16246000" />
     </task>
     <task id="LOCAL-00001" summary="PHPStorm Code Cleanup">
       <option name="closed" value="true" />
@@ -159,7 +156,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700206033416</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added a Arduino INO for ESP32 with Ethernet.  Also added code directories for the OLED display I'm using.  Will update arduino code to implement the OLED display.">
+      <option name="closed" value="true" />
+      <created>1700289006123</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700289006123</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added a Arduino INO for ESP32 with Ethernet.  Also added code directories for the OLED display I'm using.  Will update arduino code to implement the OLED display.">
+      <option name="closed" value="true" />
+      <created>1700289014368</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1700289014368</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

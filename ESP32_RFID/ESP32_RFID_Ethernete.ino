@@ -16,13 +16,18 @@
 #include <SPI.h>
 #include <MFRC522.h>
 //OLED-----------------------------
-#include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
+#include "LCD_Driver.h"
+#include "GUI_Paint.h"
+#include "image.h"
+
+//#include <Adafruit_GFX.h>
+//#include <Adafruit_SSD1306.h>
 //************************************************************************
 #define SS_PIN  4
 #define RST_PIN 5
-// Declaration for SSD1306 display connected using software I2C pins are(22 SCL, 21 SDA)
+// Declaration for ST7789V2 1.69inch LCD Module display
+// Old Display INFO connected using software I2C pins are(22 SCL, 21 SDA)
+
 #define SCREEN_WIDTH 240 // OLED display width, in pixels
 #define SCREEN_HEIGHT 280 // OLED display height, in pixels
 #define OLED_RESET     0 // Reset pin # (or -1 if sharing Arduino reset pin)
@@ -110,10 +115,14 @@ void setup() {
   SPI.begin();  // Init SPI bus
   mfrc522.PCD_Init(); // Init MFRC522 card
   //-----------initiate OLED display-------------
-  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { // Address 0x3C for 240x280
-    Serial.println(F("SSD1306 allocation failed"));
-    for(;;); // Don't proceed, loop forever
-  }
+{
+    Config_Init();
+    LCD_Init();
+
+    LCD_SetBacklight(100);
+}
+  //-----------initiate OLED display End-------------
+
   display.display();
   delay(2000); // Pause for 2 seconds
   display.clearDisplay();
@@ -149,6 +158,7 @@ void loop() {
   delay(50);
   //---------------------------------------------
   checkForNewCard();
+
 }
 //************************************************************************
 
