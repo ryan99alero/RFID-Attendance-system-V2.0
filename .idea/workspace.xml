@@ -10,10 +10,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9ee3cb4-4d19-4a47-9751-b3f5baf54885" name="Changes" comment="Updated code for OLED Display">
+      <change afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/pgmspace.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ESP32_RFID/ESP32_RFID.ino" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/ESP32_RFID.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ESP32_RFID/ESP32_RFID_Ethernete.ino" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ESP32_RFID/test.ino" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/DEV_Config.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/DEV_Config.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/DEV_Config.h" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/DEV_Config.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/Debug.h" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/Debug.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/GUI_Paint.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/GUI_Paint.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/GUI_Paint.h" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/GUI_Paint.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/LCD_1inch69.ino" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/LCD_1inch69.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/LCD_Driver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/LCD_Driver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/LCD_Driver.h" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/LCD_Driver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/font12.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/font12.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/font16.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/font16.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/font20.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/font20.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/font24.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/font24.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/font24CN.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/font24CN.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/font8.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/font8.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/fonts.h" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/fonts.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/image.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/image.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ESP32_RFID/OLED/image.h" beforeDir="false" afterPath="$PROJECT_DIR$/ESP32_RFID/Includes/OLED/image.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +90,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ESP32_RFID/Includes/OLED" />
+      <recent name="$PROJECT_DIR$/ESP32_RFID/Includes" />
       <recent name="$PROJECT_DIR$/ESP32_RFID" />
     </key>
   </component>
@@ -92,7 +110,7 @@
       <workItem from="1699933906365" duration="672000" />
       <workItem from="1699934590223" duration="5886000" />
       <workItem from="1699988294890" duration="624000" />
-      <workItem from="1700197789751" duration="16801000" />
+      <workItem from="1700197789751" duration="21306000" />
     </task>
     <task id="LOCAL-00001" summary="PHPStorm Code Cleanup">
       <option name="closed" value="true" />
@@ -190,7 +208,23 @@
       <option name="project" value="LOCAL" />
       <updated>1700291170381</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Updated code for OLED Display">
+      <option name="closed" value="true" />
+      <created>1700291633275</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1700291633275</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Updated code for OLED Display">
+      <option name="closed" value="true" />
+      <created>1700291649807</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1700291649807</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

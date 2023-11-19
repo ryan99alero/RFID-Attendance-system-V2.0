@@ -1,3 +1,5 @@
+#include <ETH.h>
+
 /* -----------------------------------------------------------------------------
   - Project: RFID attendance system using ESP32
   - Author:  https://www.youtube.com/ElectronicsTechHaIs
@@ -9,6 +11,7 @@
 
 //*******************************libraries********************************
 //ESP32----------------------------
+
 #include <ETH.h>
 #include <HTTPClient.h>
 #include <time.h>
@@ -16,9 +19,9 @@
 #include <SPI.h>
 #include <MFRC522.h>
 //OLED-----------------------------
-#include "LCD_Driver.h"
-#include "GUI_Paint.h"
-#include "image.h"
+#include "Includes/OLED/LCD_Driver.h"
+#include <GUI_Paint.h>
+#include "/Includes/OLED/image.h"
 
 //#include <Adafruit_GFX.h>
 //#include <Adafruit_SSD1306.h>
