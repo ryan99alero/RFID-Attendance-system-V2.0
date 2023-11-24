@@ -20,11 +20,22 @@
 #include <MFRC522.h>
 //OLED-----------------------------
 #include "Includes/OLED/LCD_Driver.h"
-#include <GUI_Paint.h>
-#include "/Includes/OLED/image.h"
+#include "Includes/OLED/GUI_Paint.h"
+#include "Includes/OLED/image.h"
 
-//#include <Adafruit_GFX.h>
-//#include <Adafruit_SSD1306.h>
+//************************************************************************
+//Start Ethernet Setup
+//************************************************************************
+#define ETH_TYPE        ETH_PHY_TLK110
+#define ETH_ADDR        31
+#define ETH_MDC_PIN     23
+#define ETH_MDIO_PIN    18
+#define ETH_POWER_PIN   17
+#define ETH_CLK_MODE    ETH_CLOCK_GPIO0_IN
+static bool eth_connected = false;
+//************************************************************************
+//End Ethernet Setup
+//************************************************************************
 //************************************************************************
 #define SS_PIN  4
 #define RST_PIN 5
@@ -34,7 +45,6 @@
 #define SCREEN_WIDTH 240 // OLED display width, in pixels
 #define SCREEN_HEIGHT 280 // OLED display height, in pixels
 #define OLED_RESET     0 // Reset pin # (or -1 if sharing Arduino reset pin)
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 //************************************************************************
 MFRC522 mfrc522(SS_PIN, RST_PIN); // Create MFRC522 instance.
 //************************************************************************
